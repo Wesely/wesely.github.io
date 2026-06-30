@@ -38,3 +38,9 @@ Plain HTML + CSS + vanilla JS. **No build step.** GitHub Pages serves the files 
 ## Deploy
 
 Pushing to `main` auto-publishes via GitHub Pages (source: `main` branch, root).
+
+## Legacy blog (2018)
+
+This repo previously hosted a Jekyll tech blog (Minimal Mistakes theme, ~2018).
+Those posts are preserved untouched on the **`master`** branch and in git history —
+nothing was deleted. To browse them: `git checkout master`.
