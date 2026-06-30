@@ -208,6 +208,83 @@ a:hover { color: var(--accent-soft); text-decoration: underline; text-underline-
 .icon-btn svg { width: 21px; height: 21px; display: block; }
 .icon-btn.line { color: #06c755; }
 .icon-btn.line:hover { border-color: #06c755; background: rgba(6, 199, 85, 0.08); }
+button.icon-btn { font: inherit; padding: 0; }
+
+/* ---- email chip (text + click to copy) -------------------------------- */
+button.chip { font: inherit; }
+.email-chip { font-size: 14px; cursor: pointer; }
+.email-chip .email-text { font-weight: 500; color: var(--ink); }
+.email-chip .copy-hint {
+  font-size: 11px;
+  color: var(--muted);
+  padding-left: 8px;
+  margin-left: 2px;
+  border-left: 1px solid var(--line);
+}
+.email-chip.copied { border-color: #06c755; color: #06c755; }
+.email-chip.copied .email-text { color: #06c755; }
+.email-chip.copied .copy-hint { display: none; }
+.email-chip.copied::after { content: "✓"; margin-left: 6px; font-weight: 700; }
+
+/* ---- LINE QR dialog --------------------------------------------------- */
+.line-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line-modal[hidden] { display: none; }
+.line-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.5);
+  backdrop-filter: blur(2px);
+}
+.line-modal-card {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 30px 28px 24px;
+  text-align: center;
+  max-width: 300px;
+  width: calc(100% - 40px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.2);
+}
+.line-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  border: none;
+  background: none;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+}
+.line-modal-close:hover { color: var(--ink); }
+.lm-title {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+.lm-qr { width: 190px; height: 190px; display: block; margin: 0 auto 14px; border-radius: 8px; }
+.lm-id { font-size: 14px; color: var(--ink-soft); margin: 0 0 16px; }
+.lm-id b { color: var(--ink); }
+.lm-link {
+  display: inline-block;
+  background: #06c755;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 9px 22px;
+  border-radius: 999px;
+}
+.lm-link:hover { background: #05b34c; color: #fff; text-decoration: none; }
 
 /* ---- highlight stats -------------------------------------------------- */
 .stats {

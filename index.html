@@ -54,19 +54,25 @@
         串接高併發系統工程、AI-first 轉型，以及一個個能複利成企業價值的商業里程碑。
       </p>
 
-      <!-- Contact: icon-only. Hrefs are assembled in JS from the data-v
-           base64 values so no email / phone / LINE id ever appears in the
-           served HTML source (defeats regex scrapers that don't run JS). -->
+      <!-- Contact. Email text is assembled in JS from data-v (base64) so it is
+           not in the static HTML source; clicking copies it to the clipboard
+           (more reliable than mailto). LinkedIn/GitHub are plain links; LINE
+           opens a QR dialog. -->
       <div class="contact" id="contact">
-        <a class="icon-btn" data-contact="email" data-v="d2VzZWx5Lm9uZ0BnbWFpbC5jb20=" aria-label="Email" rel="noopener nofollow">
+        <button class="chip email-chip" type="button" data-v="d2VzZWx5Lm9uZ0BnbWFpbC5jb20=" aria-label="Copy email">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v.34l-10 5.26L2 5.84zM2 8.1V18.5A1.5 1.5 0 0 0 3.5 20h17a1.5 1.5 0 0 0 1.5-1.5V8.1l-9.54 5.02a1 1 0 0 1-.92 0z"/></svg>
+          <span class="email-text">&#8230;</span>
+          <span class="copy-hint" data-lang="en">click to copy</span><span class="copy-hint" data-lang="zh">點擊複製</span>
+        </button>
+        <a class="icon-btn" href="https://www.linkedin.com/in/wesley-ong-18906871/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
-        <a class="icon-btn" data-contact="phone" data-v="Kzg4NjkyMjk5OTg4Mg==" aria-label="Phone" rel="noopener nofollow">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
+        <a class="icon-btn" href="https://github.com/Wesely" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
         </a>
-        <a class="icon-btn line" data-contact="line" data-v="d2VzZWx5b25n" aria-label="LINE" rel="noopener nofollow" target="_blank">
+        <button class="icon-btn line line-btn" type="button" aria-label="Add me on LINE">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-        </a>
+        </button>
       </div>
     </div>
   </section>
@@ -82,12 +88,12 @@
       </p>
       <div class="stats">
         <div class="stat">
-          <div class="num">TWD$1.5B</div>
+          <div class="num">~TWD$1.5B</div>
           <div class="cap"><span data-lang="en">Annual GMV of the live-commerce business I lead tech for</span><span data-lang="zh">所負責技術之直播電商年營業額</span></div>
         </div>
         <div class="stat">
           <div class="num">100+ TPS</div>
-          <div class="cap"><span data-lang="en">Order throughput — TWD$25M settled in a single 4-hour stream</span><span data-lang="zh">訂單吞吐量——單場 4 小時直播成交 2,500 萬</span></div>
+          <div class="cap"><span data-lang="en">Order throughput — 8-figure sales settled in a single 4-hour livestream</span><span data-lang="zh">訂單吞吐量——單場 4 小時直播成交八位數金額</span></div>
         </div>
         <div class="stat">
           <div class="num">15+ yrs</div>
@@ -151,14 +157,14 @@
           <span class="job-date">06/2023 – <span data-lang="en">present</span><span data-lang="zh">現職</span></span>
         </div>
         <ul>
-          <li data-lang="en">Led technology for a <b>~TWD$1.5B/yr</b> live-commerce retail business — the platform peaked at <b>TWD$100M+ GMV in a single month</b>.</li>
-          <li data-lang="zh">主導年營業額 <b>約 15 億新台幣</b> 直播電商零售事業的技術——平台單月 GMV 曾突破 <b>1 億新台幣</b>。</li>
+          <li data-lang="en">Led technology for a <b>~TWD$1.5B/yr</b> live-commerce retail business — the platform peaked at a <b>9-figure monthly GMV</b>.</li>
+          <li data-lang="zh">主導年營業額 <b>約 15 億新台幣</b> 直播電商零售事業的技術——平台單月 GMV 達 <b>九位數新台幣</b>。</li>
 
-          <li data-lang="en">Built the high-concurrency order platform behind live-stream burst sales — <b>TWD$25M in one 4-hour stream at 100+ TPS</b> with 100% inventory accuracy — integrating commerce, e-invoicing, logistics & payments.</li>
-          <li data-lang="zh">打造支撐直播爆量銷售的高併發訂單平台——<b>單場 4 小時直播成交 2,500 萬、100+ TPS</b>、零超賣，整合電商、電子發票、物流與金流。</li>
+          <li data-lang="en">Built the high-concurrency order platform behind live-stream burst sales — <b>8-figure sales in one 4-hour stream at 100+ TPS</b> with 100% inventory accuracy — integrating commerce, e-invoicing, logistics & payments.</li>
+          <li data-lang="zh">打造支撐直播爆量銷售的高併發訂單平台——<b>單場 4 小時直播成交八位數金額、100+ TPS</b>、零超賣，整合電商、電子發票、物流與金流。</li>
 
-          <li data-lang="en">Mitigated a massive <b>800M+ request botnet DDoS in 90 minutes</b> via Cloud Armor / Cloudflare.</li>
-          <li data-lang="zh">以 Cloud Armor／Cloudflare 在 <b>90 分鐘內化解超過 8 億次請求的殭屍網路 DDoS 攻擊</b>。</li>
+          <li data-lang="en">Mitigated a <b>large-scale botnet DDoS (hundreds of millions of requests) in 90 minutes</b> via Cloud Armor / Cloudflare.</li>
+          <li data-lang="zh">以 Cloud Armor／Cloudflare 在 <b>90 分鐘內化解大規模（數億次請求）殭屍網路 DDoS 攻擊</b>。</li>
 
           <li data-lang="en">Unlocked the company's first self-serve access to <b>4+ years of previously unqueryable sales data</b> — now an audit-ready single source of truth for potential IPO / acquisition.</li>
           <li data-lang="zh">打通公司 <b>4 年以上、過去無法查詢的銷售資料</b>，建立可稽核的單一真相來源（Single Source of Truth），為潛在 IPO／併購做準備。</li>
@@ -378,19 +384,35 @@
 <footer>
   <div class="wrap">
     <p class="footer-cta">
-      <span data-lang="en">Let's build something worth acquiring.</span>
-      <span data-lang="zh">一起打造值得被收購的東西。</span>
+      <span data-lang="en">Let's build something good together.</span>
+      <span data-lang="zh">一起做點好東西。</span>
     </p>
     <div class="contact" style="justify-content:center;margin:0 auto;">
-      <a class="icon-btn" data-contact="email" data-v="d2VzZWx5Lm9uZ0BnbWFpbC5jb20=" aria-label="Email" rel="noopener nofollow">
+      <button class="chip email-chip" type="button" data-v="d2VzZWx5Lm9uZ0BnbWFpbC5jb20=" aria-label="Copy email">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v.34l-10 5.26L2 5.84zM2 8.1V18.5A1.5 1.5 0 0 0 3.5 20h17a1.5 1.5 0 0 0 1.5-1.5V8.1l-9.54 5.02a1 1 0 0 1-.92 0z"/></svg>
+        <span class="email-text">&#8230;</span>
+      </button>
+      <a class="icon-btn" href="https://www.linkedin.com/in/wesley-ong-18906871/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       </a>
-      <a class="icon-btn" data-contact="phone" data-v="Kzg4NjkyMjk5OTg4Mg==" aria-label="Phone" rel="noopener nofollow">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
+      <a class="icon-btn" href="https://github.com/Wesely" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
       </a>
-      <a class="icon-btn line" data-contact="line" data-v="d2VzZWx5b25n" aria-label="LINE" rel="noopener nofollow" target="_blank">
+      <button class="icon-btn line line-btn" type="button" aria-label="Add me on LINE">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-      </a>
+      </button>
+    </div>
+
+    <!-- LINE QR dialog -->
+    <div class="line-modal" id="lineModal" hidden>
+      <div class="line-modal-backdrop" data-line-close></div>
+      <div class="line-modal-card" role="dialog" aria-modal="true" aria-label="Add me on LINE">
+        <button class="line-modal-close" type="button" data-line-close aria-label="Close">&times;</button>
+        <p class="lm-title"><span data-lang="en">Add me on LINE</span><span data-lang="zh">加我 LINE 好友</span></p>
+        <img class="lm-qr" src="line-qr.svg" alt="LINE QR code" width="190" height="190" />
+        <p class="lm-id">ID:&nbsp;<b>weselyong</b></p>
+        <a class="lm-link" href="https://line.me/ti/p/~weselyong" target="_blank" rel="noopener"><span data-lang="en">Open in LINE</span><span data-lang="zh">用 LINE 開啟</span></a>
+      </div>
     </div>
     <p style="margin-top:20px;">© <span id="year">2026</span> Wesley Weng (翁偉昇)</p>
   </div>

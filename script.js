@@ -1,4 +1,4 @@
-/* Language toggle (EN / 繁中) + scroll reveal.
+/* Language toggle (EN / 繁中), email copy, LINE QR dialog, scroll reveal.
    Pure vanilla — no build step, works as-is on GitHub Pages. */
 
 (function () {
@@ -8,16 +8,8 @@
   var body = document.body;
   var toggle = document.getElementById("langToggle");
 
-  // Each language shows the other language's name as the toggle label.
+  // Toggle shows the other language's name.
   var LABELS = { en: "中文", zh: "EN" };
-
-  // Contact buttons: type → href builder + accessible label per language.
-  // Values live base64-encoded in data-v so no plaintext is in the HTML source.
-  var CONTACTS = {
-    email: { build: function (v) { return "mailto:" + v; }, en: "Email", zh: "電子郵件" },
-    phone: { build: function (v) { return "tel:" + v; }, en: "Phone", zh: "電話" },
-    line:  { build: function (v) { return "https://line.me/ti/p/~" + v; }, en: "LINE", zh: "LINE" }
-  };
 
   function decode(b64) {
     try { return decodeURIComponent(escape(atob(b64))); }
@@ -30,30 +22,62 @@
     body.classList.toggle("lang-en", !isZh);
     document.documentElement.lang = isZh ? "zh-Hant-TW" : "en";
     if (toggle) toggle.textContent = LABELS[lang];
+  }
 
-    // Refresh contact button labels in the active language.
-    var btns = document.querySelectorAll(".icon-btn[data-contact]");
-    btns.forEach(function (btn) {
-      var spec = CONTACTS[btn.getAttribute("data-contact")];
-      if (spec) {
-        btn.setAttribute("aria-label", spec[lang]);
-        btn.setAttribute("title", spec[lang]);
+  // ---- Email: fill text from base64 (kept out of static HTML) + copy ------
+  var emailAddr = "";
+  document.querySelectorAll(".email-chip").forEach(function (chip) {
+    var addr = decode(chip.getAttribute("data-v") || "");
+    if (!addr) return;
+    emailAddr = addr;
+    var textEl = chip.querySelector(".email-text");
+    if (textEl) textEl.textContent = addr;
+    chip.setAttribute("aria-label", "Copy email " + addr);
+
+    chip.addEventListener("click", function () {
+      var done = function () {
+        chip.classList.add("copied");
+        setTimeout(function () { chip.classList.remove("copied"); }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(addr).then(done, fallbackCopy);
+      } else {
+        fallbackCopy();
+      }
+      function fallbackCopy() {
+        try {
+          var ta = document.createElement("textarea");
+          ta.value = addr;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          document.body.removeChild(ta);
+          done();
+        } catch (e) { /* ignore */ }
       }
     });
-  }
+  });
 
-  // Assemble the real hrefs once, at runtime — never present in static HTML.
-  function buildContacts() {
-    document.querySelectorAll(".icon-btn[data-contact]").forEach(function (btn) {
-      var spec = CONTACTS[btn.getAttribute("data-contact")];
-      var v = decode(btn.getAttribute("data-v") || "");
-      if (spec && v) btn.setAttribute("href", spec.build(v));
+  // ---- LINE QR dialog -----------------------------------------------------
+  var modal = document.getElementById("lineModal");
+  function openModal() { if (modal) { modal.hidden = false; document.body.style.overflow = "hidden"; } }
+  function closeModal() { if (modal) { modal.hidden = true; document.body.style.overflow = ""; } }
+
+  document.querySelectorAll(".line-btn").forEach(function (btn) {
+    btn.addEventListener("click", openModal);
+  });
+  if (modal) {
+    modal.querySelectorAll("[data-line-close]").forEach(function (el) {
+      el.addEventListener("click", closeModal);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !modal.hidden) closeModal();
     });
   }
 
-  buildContacts();
-
-  // Initial language: stored preference → browser hint → English.
+  // ---- Language init + toggle ---------------------------------------------
   function initialLang() {
     var stored = null;
     try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) { /* ignore */ }
@@ -72,11 +96,11 @@
     });
   }
 
-  // Current year in footer.
+  // ---- Footer year --------------------------------------------------------
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  // Scroll reveal — tag every section and animate on entry.
+  // ---- Scroll reveal ------------------------------------------------------
   var sections = document.querySelectorAll("main > section");
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
