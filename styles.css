@@ -291,50 +291,6 @@ a:hover { color: var(--accent-soft); text-decoration: underline; text-underline-
 }
 .job li b { color: var(--ink); font-weight: 600; }
 
-/* ---- timeline --------------------------------------------------------- */
-.timeline {
-  position: relative;
-  margin-top: 8px;
-  padding-left: 26px;
-}
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: 6px;
-  bottom: 6px;
-  width: 1px;
-  background: var(--line);
-}
-.tl-item { position: relative; margin-bottom: 28px; }
-.tl-item:last-child { margin-bottom: 0; }
-.tl-item::before {
-  content: "";
-  position: absolute;
-  left: -24px;
-  top: 6px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--paper);
-  border: 2px solid var(--accent);
-}
-.tl-era {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-.tl-title {
-  font-family: var(--serif);
-  font-size: 18px;
-  font-weight: 600;
-  margin: 2px 0 8px;
-}
-.tl-item ul { margin: 0; padding-left: 18px; }
-.tl-item li { margin-bottom: 6px; color: var(--ink-soft); font-size: 15.5px; }
-
 /* ---- case study card -------------------------------------------------- */
 .card {
   background: var(--paper-2);
