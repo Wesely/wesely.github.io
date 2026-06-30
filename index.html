@@ -23,7 +23,7 @@
       <a class="nav-link" href="#roadmap" data-lang="zh">歷程</a>
       <a class="nav-link" href="#case" data-lang="en">Case Study</a>
       <a class="nav-link" href="#case" data-lang="zh">案例</a>
-      <a class="nav-link" href="#collective" data-lang="en">Collective</a>
+      <a class="nav-link" href="#collective" data-lang="en">Team</a>
       <a class="nav-link" href="#collective" data-lang="zh">團隊</a>
       <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch language">中文</button>
     </nav>
@@ -56,19 +56,19 @@
         串接高併發系統工程、AI-first 轉型，以及一個個能複利成企業價值的商業里程碑。
       </p>
 
-      <div class="contact">
-        <a class="chip" href="mailto:wesely.ong@gmail.com">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-          wesely.ong@gmail.com
+      <!-- Contact: icon-only. Hrefs are assembled in JS from the data-v
+           base64 values so no email / phone / LINE id ever appears in the
+           served HTML source (defeats regex scrapers that don't run JS). -->
+      <div class="contact" id="contact">
+        <a class="icon-btn" data-contact="email" data-v="d2VzZWx5Lm9uZ0BnbWFpbC5jb20=" aria-label="Email" rel="noopener nofollow">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v.34l-10 5.26L2 5.84zM2 8.1V18.5A1.5 1.5 0 0 0 3.5 20h17a1.5 1.5 0 0 0 1.5-1.5V8.1l-9.54 5.02a1 1 0 0 1-.92 0z"/></svg>
         </a>
-        <a class="chip" href="tel:+886922999882">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          +886 922-999882
+        <a class="icon-btn" data-contact="phone" data-v="Kzg4NjkyMjk5OTg4Mg==" aria-label="Phone" rel="noopener nofollow">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
         </a>
-        <span class="chip">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          LINE: weselyong
-        </span>
+        <a class="icon-btn line" data-contact="line" data-v="d2VzZWx5b25n" aria-label="LINE" rel="noopener nofollow" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -333,65 +333,65 @@
   <section id="collective">
     <div class="wrap">
       <p class="section-label">
-        <span data-lang="en">The Venture Collective</span><span data-lang="zh">創業聯隊</span>
+        <span data-lang="en">The Team I Bring</span><span data-lang="zh">我能帶來的團隊</span>
       </p>
       <h2 style="font-size:26px;margin:0 0 12px;">
-        <span data-lang="en">High-density startup execution — zero to NASDAQ.</span>
-        <span data-lang="zh">高密度新創執行力——從 0 到 NASDAQ。</span>
+        <span data-lang="en">I can assemble a senior team — fast.</span>
+        <span data-lang="zh">我能很快集結一支資深團隊。</span>
       </h2>
       <p data-lang="en">
-        A hand-picked circle of experts with shared history at <b>Grindr</b> and NASDAQ-listed
-        firms. Not an agency — no corporate markup, no middle managers. We operate on a
-        lower-cash, higher-equity model (30–50% equity), functioning as internal stakeholders
-        rather than vendors, and bring "big-corp" expertise — from AI infrastructure to IPO
-        compliance — only when you need it.
+        I work best with a team around me. From years at <b>Grindr</b> and a string of ventures,
+        I've kept close working ties with senior engineers and fractional executives I trust —
+        so when something needs building, I can pull together a capable, pre-synced team in days
+        rather than starting cold. Several are open to a lower-cash, higher-equity arrangement,
+        joining as committed stakeholders rather than vendors. The value isn't a fixed roster —
+        it's being able to stand up the right bench for the problem, quickly.
       </p>
       <p data-lang="zh">
-        一群在 <b>Grindr</b> 與 NASDAQ 上市公司共事過、精挑細選的專家。我們不是代理商——沒有企業加成、沒有中間管理層。
-        以「低現金、高股權」模式運作（30–50% 股權），作為內部利害關係人而非廠商；並在你需要時，
-        才帶入從 AI 基礎建設到 IPO 法遵的「大公司級」專業。
+        我習慣帶著一支團隊一起做事。在 <b>Grindr</b> 與多次創業的過程裡，我和一群信任的資深工程師與分時（fractional）
+        高階主管維持著緊密的合作關係——需要動手時，我能在幾天內集結一支有默契、能立刻上手的團隊，而不是從零開始。
+        其中不少人願意以低現金、高股權的方式參與，作為真正的利害關係人而非外包廠商。價值不在於一份固定名單，
+        而在於能針對問題，快速組起對的陣容。
+      </p>
+      <p style="font-size:14.5px;color:var(--muted);margin:18px 0 4px;">
+        <span data-lang="en">Roles I can typically bring to the table (by experience, not a fixed list):</span>
+        <span data-lang="zh">通常能找來的角色（以經歷描述，非固定名單）：</span>
       </p>
       <div class="people">
         <div class="person">
-          <div class="pname">Wesley Weng</div>
-          <div class="prole" data-lang="en">Architect & Lead Partner</div>
-          <div class="prole" data-lang="zh">架構師暨主理合夥人</div>
-          <p class="pdesc" data-lang="en">Ex-Grindr (NASDAQ: GRND). High-concurrency (100+ TPS) and AI-first infrastructure.</p>
-          <p class="pdesc" data-lang="zh">前 Grindr（NASDAQ: GRND）。專精高併發（100+ TPS）與 AI-first 基礎建設。</p>
+          <div class="pname" data-lang="en">Mobile & Frontend Lead</div>
+          <div class="pname" data-lang="zh">行動與前端主管</div>
+          <p class="pdesc" data-lang="en">Former mobile team lead at Grindr; high-performance Flutter / Next.js.</p>
+          <p class="pdesc" data-lang="zh">前 Grindr 行動團隊主管；高效能 Flutter／Next.js。</p>
         </div>
         <div class="person">
-          <div class="pname">Patrick</div>
-          <div class="prole" data-lang="en">Mobile & Frontend Lead</div>
-          <div class="prole" data-lang="zh">行動與前端主管</div>
-          <p class="pdesc" data-lang="en">Former Mobile Team Lead @ Grindr. High-performance Flutter / Next.js.</p>
-          <p class="pdesc" data-lang="zh">前 Grindr 行動團隊主管。高效能 Flutter／Next.js。</p>
+          <div class="pname" data-lang="en">Backend & Algorithm Lead</div>
+          <div class="pname" data-lang="zh">後端與演算法主管</div>
+          <p class="pdesc" data-lang="en">Python / AI specialist with a deep focus on algorithms.</p>
+          <p class="pdesc" data-lang="zh">Python／AI 專家，專注於演算法。</p>
         </div>
         <div class="person">
-          <div class="pname">Aidan</div>
-          <div class="prole" data-lang="en">Backend & Algorithm Lead</div>
-          <div class="prole" data-lang="zh">後端與演算法主管</div>
-          <p class="pdesc" data-lang="en">Python / AI specialist and self-described "algorithm mania".</p>
-          <p class="pdesc" data-lang="zh">Python／AI 專家，自稱「演算法狂熱者」。</p>
+          <div class="pname" data-lang="en">AI & Infrastructure Advisor</div>
+          <div class="pname" data-lang="zh">AI 與基礎建設顧問</div>
+          <p class="pdesc" data-lang="en">Former tech director of 80+ engineers; large-scale AI & advanced RAG.</p>
+          <p class="pdesc" data-lang="zh">曾領導 80+ 工程師的技術總監；大規模 AI 與進階 RAG。</p>
         </div>
         <div class="person">
-          <div class="pname">Bruce</div>
-          <div class="prole" data-lang="en">AI & Infrastructure Advisor</div>
-          <div class="prole" data-lang="zh">AI 與基礎建設顧問</div>
-          <p class="pdesc" data-lang="en">Former Tech Director of 80+ SWEs; active EM at Taboola. Large-scale AI & advanced RAG.</p>
-          <p class="pdesc" data-lang="zh">前 80+ 工程師的技術總監，現 Taboola 工程經理。大規模 AI 與進階 RAG。</p>
+          <div class="pname" data-lang="en">SRE & Infrastructure</div>
+          <div class="pname" data-lang="zh">SRE 與基礎建設</div>
+          <p class="pdesc" data-lang="en">Former regional engineering lead at Grindr; global system reliability and scaling.</p>
+          <p class="pdesc" data-lang="zh">前 Grindr 區域工程主管；全球系統穩定性與擴展。</p>
         </div>
         <div class="person">
-          <div class="pname">Titan</div>
-          <div class="prole" data-lang="en">Fractional CLO</div>
-          <div class="prole" data-lang="zh">分時法務長（CLO）</div>
-          <p class="pdesc" data-lang="en">CLO of an 8k-employee global firm. Veteran of NASDAQ IPOs and US–Taiwan regulatory strategy.</p>
-          <p class="pdesc" data-lang="zh">某 8,000 人跨國企業法務長。NASDAQ IPO 與台美法規策略老手。</p>
+          <div class="pname" data-lang="en">Fractional CLO</div>
+          <div class="pname" data-lang="zh">分時法務長（CLO）</div>
+          <p class="pdesc" data-lang="en">Legal lead at a large global firm; NASDAQ IPO and US–Taiwan regulatory experience.</p>
+          <p class="pdesc" data-lang="zh">大型跨國企業法務主管；具 NASDAQ IPO 與台美法規經驗。</p>
         </div>
         <div class="person">
-          <div class="pname">Pan</div>
-          <div class="prole" data-lang="en">Fractional CFO</div>
-          <div class="prole" data-lang="zh">分時財務長（CFO）</div>
-          <p class="pdesc" data-lang="en">Cross-border (US/TW/CN/JP) compliance and IPO-ready financial planning.</p>
+          <div class="pname" data-lang="en">Fractional CFO</div>
+          <div class="pname" data-lang="zh">分時財務長（CFO）</div>
+          <p class="pdesc" data-lang="en">Cross-border (US / TW / CN / JP) compliance and IPO-ready financial planning.</p>
           <p class="pdesc" data-lang="zh">跨境（美／台／中／日）法遵與 IPO 等級財務規劃。</p>
         </div>
       </div>
@@ -418,13 +418,13 @@
         <span data-lang="en">References</span><span data-lang="zh">推薦人</span>
       </p>
       <p style="font-size:14.5px;color:var(--muted);margin-bottom:10px;">
-        <span data-lang="en">Please reach out for contact details.</span>
-        <span data-lang="zh">如需聯絡方式，歡迎私訊洽詢。</span>
+        <span data-lang="en">Named references available on request.</span>
+        <span data-lang="zh">完整推薦人資訊可另行提供。</span>
       </p>
       <ul class="simple-list">
-        <li><span class="li-title">Bruce Kuo</span> — Tech Director @ Dcard, Eng Lead @ Taboola<span data-lang="en"> · partners since our student days</span><span data-lang="zh"> · 自學生時代起的好夥伴</span></li>
-        <li><span class="li-title">Samael Wang</span> — Taiwan Lead @ Grindr<span data-lang="en"> · my team lead at Grindr</span><span data-lang="zh"> · 我在 Grindr 的團隊主管</span></li>
-        <li><span class="li-title">Alex Lin</span> — VP @ Grindr, Eng Lead @ RingCentral<span data-lang="en"> · our VP at Grindr Taiwan</span><span data-lang="zh"> · 我們在 Grindr 台灣的 VP</span></li>
+        <li><span class="li-title" data-lang="en">Tech Director @ Dcard, Eng Lead @ Taboola</span><span class="li-title" data-lang="zh">Dcard 技術總監、Taboola 工程主管</span><span data-lang="en"> · partners since our student days</span><span data-lang="zh"> · 自學生時代起的好夥伴</span></li>
+        <li><span class="li-title" data-lang="en">Taiwan Lead @ Grindr</span><span class="li-title" data-lang="zh">Grindr 台灣負責人</span><span data-lang="en"> · my team lead at Grindr</span><span data-lang="zh"> · 我在 Grindr 的團隊主管</span></li>
+        <li><span class="li-title" data-lang="en">VP @ Grindr, Eng Lead @ RingCentral</span><span class="li-title" data-lang="zh">Grindr 副總、RingCentral 工程主管</span><span data-lang="en"> · our VP at Grindr Taiwan</span><span data-lang="zh"> · 我們在 Grindr 台灣的 VP</span></li>
       </ul>
     </div>
   </section>
@@ -439,10 +439,18 @@
       <span data-lang="en">Let's build something worth acquiring.</span>
       <span data-lang="zh">一起打造值得被收購的東西。</span>
     </p>
-    <p>
-      <a href="mailto:wesely.ong@gmail.com">wesely.ong@gmail.com</a> · LINE: weselyong · +886 922-999882
-    </p>
-    <p style="margin-top:14px;">© <span id="year">2026</span> Wesley Weng (翁偉昇)</p>
+    <div class="contact" style="justify-content:center;margin:0 auto;">
+      <a class="icon-btn" data-contact="email" data-v="d2VzZWx5Lm9uZ0BnbWFpbC5jb20=" aria-label="Email" rel="noopener nofollow">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v.34l-10 5.26L2 5.84zM2 8.1V18.5A1.5 1.5 0 0 0 3.5 20h17a1.5 1.5 0 0 0 1.5-1.5V8.1l-9.54 5.02a1 1 0 0 1-.92 0z"/></svg>
+      </a>
+      <a class="icon-btn" data-contact="phone" data-v="Kzg4NjkyMjk5OTg4Mg==" aria-label="Phone" rel="noopener nofollow">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
+      </a>
+      <a class="icon-btn line" data-contact="line" data-v="d2VzZWx5b25n" aria-label="LINE" rel="noopener nofollow" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      </a>
+    </div>
+    <p style="margin-top:20px;">© <span id="year">2026</span> Wesley Weng (翁偉昇)</p>
   </div>
 </footer>
 

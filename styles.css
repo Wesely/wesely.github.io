@@ -186,6 +186,29 @@ a:hover { color: var(--accent-soft); text-decoration: underline; text-underline-
 .chip:hover { border-color: var(--accent); text-decoration: none; transform: translateY(-1px); }
 .chip svg { width: 15px; height: 15px; opacity: .65; }
 
+/* ---- contact icon buttons (consistent round, LINE in brand green) ----- */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  color: var(--accent);
+  cursor: pointer;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+.icon-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.icon-btn svg { width: 21px; height: 21px; display: block; }
+.icon-btn.line { color: #06c755; }
+.icon-btn.line:hover { border-color: #06c755; background: rgba(6, 199, 85, 0.08); }
+
 /* ---- highlight stats -------------------------------------------------- */
 .stats {
   display: grid;
