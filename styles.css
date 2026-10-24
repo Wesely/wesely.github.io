@@ -367,6 +367,16 @@ button.chip { font: inherit; }
   background: var(--gold);
 }
 .job li b { color: var(--ink); font-weight: 600; }
+.job-group {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 18px 0 0;
+}
+.job-group + ul { margin-top: 8px; }
 
 /* ---- case study card -------------------------------------------------- */
 .card {

@@ -1,9 +1,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Wesley Weng — Software engineer & tech lead</title>
-<meta name="description" content="Wesley Weng (翁偉昇) — software engineer and tech lead based in Taiwan, currently Tech Director at Vannise. Backend and high-concurrency systems; previously at Grindr." />
+<meta name="description" content="Wesley Weng (翁偉昇) — software engineer and tech lead based in Taiwan, currently Tech Director at Vannise. Backend and high-concurrency systems, data pipelines, and company-wide AI adoption; previously at Grindr." />
 <meta property="og:title" content="Wesley Weng — Software engineer & tech lead" />
-<meta property="og:description" content="Software engineer based in Taiwan. Backend and high-concurrency systems, AI-assisted development. Currently at Vannise; previously Grindr." />
+<meta property="og:description" content="Software engineer based in Taiwan. Backend and high-concurrency systems, data pipelines, and company-wide AI adoption. Currently at Vannise; previously Grindr." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,13 +46,13 @@
         A software engineer based in Taiwan, currently leading engineering at Vannise.
         Over the past ~15 years I've worked at startups and at a NASDAQ-listed company —
         co-founding a payments startup, building mobile and backend systems, and more
-        recently working on commerce platforms and AI-assisted development. I like taking
+        recently leading a commerce platform and a company-wide AI adoption program. I like taking
         unclear problems and turning them into systems that hold up in production.
       </p>
       <p class="lede" data-lang="zh">
         一名在台灣的軟體工程師，目前在 Vannise 帶工程。過去約 15 年，我待過新創，
         也待過 NASDAQ 上市公司——共同創辦過一家支付新創、做過行動與後端系統，
-        近幾年則在電商平台與 AI 輔助開發上。我喜歡把還不清楚的問題，做成在線上撐得住的系統。
+        近幾年則帶一個電商平台，並推動全公司的 AI 導入。我喜歡把還不清楚的問題，做成在線上撐得住的系統。
       </p>
 
       <!-- Contact. Email text is assembled in JS from data-v (base64) so it is
@@ -88,13 +88,13 @@
       </p>
       <p data-lang="en">
         I mostly work on backend and high-concurrency systems, and on making AI a practical
-        part of how a team builds — moving from "AI-friendly" to "AI-first", where AI does a
-        lot of the drafting and people review and decide. I care more about systems that keep
-        working than about novelty.
+        part of how a company operates — moving from "AI-friendly" to "AI-first", where AI
+        agents do the drafting, filling and routing, and people review and decide. I care more
+        about systems that keep working than about novelty.
       </p>
       <p data-lang="zh">
-        我主要做後端與高併發系統，也在把 AI 變成團隊開發裡實際好用的一環——
-        從「AI-friendly」往「AI-first」走：讓 AI 負責大量草稿、由人來審查與拍板。
+        我主要做後端與高併發系統，也在把 AI 變成公司日常運作裡實際好用的一環——
+        從「AI-friendly」往「AI-first」走：讓 AI agent 負責起草、填單與轉送，由人來審查與拍板。
         比起新奇，我更在意系統能不能持續穩定運作。
       </p>
       <p data-lang="en">
@@ -122,20 +122,47 @@
           <span class="job-date">06/2023 – <span data-lang="en">present</span><span data-lang="zh">現職</span></span>
         </div>
         <ul>
-          <li data-lang="en">Lead engineering for a live-commerce retail business (~TWD$1.5B/yr GMV).</li>
-          <li data-lang="zh">負責一間直播電商零售事業的工程（年 GMV 約 15 億新台幣）。</li>
+          <li data-lang="en">Led the SWE team for a TWD 1.2B/yr retail business; the platform we built peaked at TWD 100M+ GMV in a single month.</li>
+          <li data-lang="zh">帶領軟體團隊，支撐年營收約 12 億新台幣的零售事業；平台單月 GMV 最高超過 1 億。</li>
 
-          <li data-lang="en">Built the order platform behind live-stream sales — high-concurrency (100+ TPS), integrating commerce, e-invoicing, logistics and payments.</li>
-          <li data-lang="zh">打造支撐直播銷售的訂單平台——高併發（100+ TPS），整合電商、電子發票、物流與金流。</li>
+          <li data-lang="en">Built the high-concurrency order platform behind live-stream burst sales (TWD 25M in one 4-hour stream, 100+ TPS), integrating commerce, e-invoicing, logistics and payments.</li>
+          <li data-lang="zh">打造支撐直播瞬間銷售的高併發訂單平台（單場 4 小時 2,500 萬、100+ TPS），整合電商、電子發票、物流與金流。</li>
 
           <li data-lang="en">Handled a large-scale botnet DDoS using Cloud Armor / Cloudflare.</li>
           <li data-lang="zh">以 Cloud Armor／Cloudflare 處理一次大規模殭屍網路 DDoS 攻擊。</li>
+        </ul>
 
-          <li data-lang="en">Built a data pipeline to make 4+ years of previously hard-to-query sales data usable for reporting.</li>
-          <li data-lang="zh">建了一條資料管線，讓公司 4 年以上、過去難以查詢的銷售資料能用於報表分析。</li>
+        <p class="job-group"><span data-lang="en">AI Transformation</span><span data-lang="zh">AI 轉型</span></p>
+        <ul>
+          <li data-lang="en">Authored the company's AI-adoption program, which the GM adopted as a company-wide initiative.</li>
+          <li data-lang="zh">擬定公司的 AI 導入計畫，經總經理採納為全公司層級的專案。</li>
 
-          <li data-lang="en">Work on AI-assisted development and internal tooling for the team.</li>
-          <li data-lang="zh">做 AI 輔助開發與團隊內部工具。</li>
+          <li data-lang="en">Deployed and run a self-hosted AI task platform (Multica) with 30+ AI agents; onboarded all 16 managers.</li>
+          <li data-lang="zh">部署並維運自架的 AI 任務平台（Multica），30+ 個 AI agent，全體 16 位主管上線使用。</li>
+
+          <li data-lang="en">Built the procurement document system from scratch (POs, receiving, shipping, payments), exposed to AI agents through MCP servers with 90+ tools.</li>
+          <li data-lang="zh">從零建立採購單據系統（採購單、驗收、出貨、付款），透過 MCP server 開放 90+ 個工具給 AI agent 使用。</li>
+
+          <li data-lang="en">Automated meeting minutes end to end: Meet recordings → on-prem Whisper → Claude → minutes with action items.</li>
+          <li data-lang="zh">會議記錄全自動化：Meet 錄影 → 地端 Whisper → Claude → 含待辦事項的會議記錄。</li>
+        </ul>
+
+        <p class="job-group"><span data-lang="en">Data</span><span data-lang="zh">資料</span></p>
+        <ul>
+          <li data-lang="en">Built the company's ELT pipeline on GCP from scratch, delivering analysis-ready datasets (4.1M order lines, 38.6M chat records) with de-identified versions for company-wide use.</li>
+          <li data-lang="zh">從零在 GCP 上建立公司的 ELT 資料管線，產出可直接分析的資料集（410 萬筆訂單明細、3,860 萬筆客服紀錄），並提供去識別化版本供全公司使用。</li>
+        </ul>
+
+        <p class="job-group"><span data-lang="en">Operations (beyond the tech remit)</span><span data-lang="zh">營運（技術職責之外）</span></p>
+        <ul>
+          <li data-lang="en">Driving company-wide form standardization: each department documents its forms with usage rules (when to use, who fills them in, where they go), so AI agents can fill and route them.</li>
+          <li data-lang="zh">推動全公司單據制式化：各部門把單據與使用規則（何時用、誰填、送到哪）寫成文件，讓 AI agent 能代填與轉送。</li>
+
+          <li data-lang="en">Driving process standardization: written procedures and approval criteria, so reviews follow rules rather than individual judgment.</li>
+          <li data-lang="zh">推動作業流程規章化：作業程序與審核標準寫成書面規則，審核依規則進行。</li>
+
+          <li data-lang="en">Moved cross-department work off LINE chats into tracked tasks with clear owners and handoffs.</li>
+          <li data-lang="zh">把跨部門工作從 LINE 對話移到有負責人與交接點的任務追蹤。</li>
         </ul>
       </div>
 
